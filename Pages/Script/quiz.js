@@ -1018,8 +1018,8 @@ async function saveQuizHistoryToFirebase(category, userScore, totalQuestions, ti
             console.log("[QUIZ] Quiz history saved successfully.");
 
             // 2. Atualizar estatísticas do quiz (documento separado para estatísticas)
-            const quizStatsRef = db.collection('quizStats').doc(`${userId}_${category}`);
-
+            const quizStatsRef = db.collection('quizStats').doc(userId);
+            
             // Usar transação para atualizar estatísticas
             await db.runTransaction(async (transaction) => {
                 const statsDoc = await transaction.get(quizStatsRef);
