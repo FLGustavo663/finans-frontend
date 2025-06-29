@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Finans</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="Style/login.css"> <!-- Link para CSS específico da página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../Images/favicon.png" type="image/png">
+    <!-- Carregando Firebase diretamente -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo"><span class="logo-f">F$</span>Finans</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="orcamento.html" class="active orcamento">Orçamento</a></li>
+                    <li><a href="indicacoes.html">Indicações</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a class="quiz" href="quiz.html">Quiz</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Entrar</a>
+                    <a href="register.html" class="btn btn-primary">Registrar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="auth-form-container">
+                <h2>Entrar na sua Conta</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Sua senha" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="remember-me"><input type="checkbox" name="remember"> Lembrar-me</label>
+                        <a href="#" id="forgotPasswordLink" class="forgot-password-link">Esqueceu a senha?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full-width">Entrar</button>
+                    <!-- O botão do Google será adicionado via JavaScript -->
+                    <div id="googleLoginContainer"></div>
+                    <p class="form-footer-text">Não tem uma conta? <a href="register.html">Registre-se</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                 <div class="footer-col">
+                    <a href="../index.html" class="logo"><span class="logo-f">F$</span>Finans</a>
+                    <p>Planejamento financeiro simplificado para jovens.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="orcamento.html">Simulador de Orçamento</a></li>
+                        <li><a href="indicacoes.html">Indicações</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Finans. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ordem correta de carregamento dos scripts -->
+    <script src="../Script/script.js"></script>
+    <script src="../Script/firebase-config.js"></script>
+    <script src="Script/login.js"></script> <!-- Link para JS específico da página -->
+</body>
+</html>

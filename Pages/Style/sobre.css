@@ -1,0 +1,73 @@
+.page-title-section {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-title-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.page-title-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.about-content-section {
+    padding: 80px 0;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.about-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.about-card h2 {
+    /* color: #16a085; */
+    color: #4CAF50;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* .about-card ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.about-card ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.about-card ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 15px;
+    height: 15px;
+    background-image: url('../Images/icon_verificacao.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+} */

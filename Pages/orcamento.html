@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finans</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="Style/orcamento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../Images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo"><span class="logo-f">F$</span>Finans</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="orcamento.html" class="active home">Orçamento</a></li>
+                    <li><a href="indicacoes.html">Indicações</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a class="quiz" href="quiz.html">Quiz</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Entrar</a>
+                    <a href="register.html" class="btn btn-primary">Registrar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Simulador de Orçamento</h1>
+                <p>Informe sua renda mensal e receba uma sugestão de distribuição financeira baseada na regra 50/30/20.</p>
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator-container">
+                    <!-- Removido H2 "Calcule seu Orçamento Ideal" -->
+                    <form id="budgetSimulatorForm">
+                        <div class="form-group">
+                            <label for="monthlyIncome">Renda Mensal (R$)</label> <!-- Corrigido Label -->
+                            <input type="number" id="monthlyIncome" name="monthlyIncome" placeholder="Ex: 3.000,00" step="0.01" required> <!-- Corrigido Placeholder -->
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full-width">Calcular Orçamento</button>
+                    </form>
+
+                    <div id="budgetResult" class="results-display" style="display: none;"> <!-- Adicionado style="display: none;" para ocultar inicialmente -->
+                        <h3>Sugestão de Orçamento Mensal:</h3>
+                        <div class="result-item">
+                            <h4>Necessidades Essenciais (50%):</h4>
+                            <p id="necessitiesAmount">R$ 0,00</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Gastos Pessoais e Lazer (30%):</h4>
+                            <p id="personalSpendsAmount">R$ 0,00</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Poupança e Investimentos (20%):</h4>
+                            <p id="savingsInvestmentsAmount">R$ 0,00</p>
+                        </div>
+                        <!-- Removido botão "Salvar Orçamento" -->
+                    </div>
+                </div>
+
+                <div class="simulator-info">
+                    <h3>Sobre o Simulador</h3> <!-- Corrigido Título da Seção -->
+                    <p>Este simulador utiliza a regra 50/30/20, um método popular de gestão financeira que divide sua renda em três categorias principais: necessidades, gastos pessoais e poupança/investimentos. Esta é uma forma simples e eficaz de começar a organizar suas finanças.</p> <!-- Corrigido Conteúdo do Texto -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                 <div class="footer-col">
+                    <a href="../index.html" class="logo"><span class="logo-f">F$</span>Finans</a>
+                    <p>Planejamento financeiro simplificado para jovens.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="orcamento.html">Simulador de Orçamento</a></li>
+                        <li><a href="indicacoes.html">Indicações</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Finans. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Script/script.js"></script>
+    <script src="../Script/firebase-config.js"></script>
+    <script src="Script/orcamento.js"></script>
+</body>
+</html>

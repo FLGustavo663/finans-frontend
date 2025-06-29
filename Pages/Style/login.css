@@ -1,0 +1,191 @@
+/* Estilos para os componentes de autenticação */
+
+/* Container do formulário */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 300px);
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.auth-form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Título do formulário */
+.auth-form-container h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Grupos de formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #27ae60;
+    outline: none;
+}
+
+/* Opções do formulário (lembrar-me, esqueceu senha) */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remember-me input {
+    margin-right: 8px;
+}
+
+.forgot-password-link {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Botão de largura total */
+.btn-full-width {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Texto de rodapé do formulário */
+.form-footer-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.form-footer-text a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.form-footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Separador com texto "ou" */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #777;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.separator span {
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+/* Botão de login/registro com Google */
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-google:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.google-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+/* Mensagens de feedback */
+.auth-message {
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.auth-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.auth-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .auth-form-container {
+        padding: 20px;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .forgot-password-link {
+        margin-top: 10px;
+    }
+}

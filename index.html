@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finans</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo"><span class="logo-f">F$</span>Finans</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active home">Home</a></li>
+                    <li><a href="Pages/orcamento.html">Orçamento</a></li>
+                    <li><a href="Pages/indicacoes.html">Indicações</a></li>
+                    <li><a href="Pages/sobre.html">Sobre</a></li>
+                    <li><a class="quiz" href="Pages/quiz.html">Quiz</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="Pages/login.html" class="btn btn-outline">Entrar</a>
+                    <a href="Pages/register.html" class="btn btn-primary">Registrar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Simplifique Suas Finanças</h1>
+                <p>Assuma o controle do seu dinheiro com nossa plataforma de gestão financeira. Planeje, economize e alcance suas metas financeiras.</p>
+                <div class="hero-buttons">
+                    <a href="Pages/register.html" class="btn btn-hero-primary">Começar Agora</a>
+                    <a href="Pages/sobre.html" class="btn btn-hero-outline">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Nossas Funcionalidades</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Simulador de Orçamento</h3>
+                        <p>Crie um plano financeiro personalizado baseado em sua renda mensal.</p>
+                        <a href="Pages/orcamento.html" class="btn btn-outline-primary">Explorar</a>
+                    </div>
+                    <div class="feature-card dics">
+                        <h3>Quiz</h3>
+                        <p>Quiz interativo com feedbacks relacionados as perguntas.</p>
+                        <a href="Pages/quiz.html" class="btn btn-outline-primary">Iniciar</a>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Indicações</h3>
+                        <p>Livros, cursos e recursos selecionados para seu desenvolvimento financeiro.</p>
+                        <a href="Pages/indicacoes.html" class="btn btn-outline-primary">Explorar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Pronto para transformar suas finanças?</h2>
+                <p>Junte-se a milhares de pessoas que já estão no controle de seu dinheiro e conquistando suas metas financeiras.</p>
+                <a href="Pages/register.html" class="btn btn-primary-dark">Criar Conta Gratuita</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                 <div class="footer-col">
+                    <a href="index.html" class="logo"><span class="logo-f">F$</span>Finans</a>
+                    <p>Planejamento financeiro simplificado para jovens.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="Pages/quiz.html">Quiz</a></li>
+                        <li><a href="Pages/orcamento.html">Simulador de Orçamento</a></li>
+                        <li><a href="Pages/indicacoes.html">Indicações</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="Pages/sobre.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Finans. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Script/script.js"></script>
+    <script src="Script/firebase-config.js"></script>
+</body>
+</html>

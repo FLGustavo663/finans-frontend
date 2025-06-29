@@ -1,0 +1,79 @@
+/* Estilos específicos para a página do Simulador de Orçamento */
+.calculator-section {
+    padding: 50px 0;
+}
+
+.calculator-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.calculator-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #16a085;
+    font-size: 1.8rem;
+}
+
+/* .form-group é global, mas se houver variações específicas para o orçamento, podem vir aqui */
+
+.results-display {
+    background-color: #e6f7f0;
+    padding: 18px;
+    border-radius: 5px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.results-display h3 {
+    color: #16a085;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.result-item {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.result-item h4 {
+    color: #16a085;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.result-item p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.simulator-info {
+    margin-top: 35px;
+    text-align: center;
+    padding: 18px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.simulator-info h3 {
+    color: #16a085;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.simulator-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto;
+}
+

@@ -1,0 +1,60 @@
+/* Estilos para os componentes de autenticação - Página de Registro */
+
+/* Importando os mesmos estilos da página de login para manter consistência */
+@import url('login.css');
+
+/* Estilos específicos para a página de registro, se necessário */
+.auth-form-container {
+    /* Aumentando um pouco a largura para acomodar o formulário de registro */
+    max-width: 480px;
+}
+
+/* Estilo para o campo de confirmação de senha */
+#confirmPassword:focus {
+    border-color: #27ae60;
+}
+
+/* Estilo para validação de força de senha (a ser implementado) */
+.password-strength {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.password-strength.weak {
+    color: #dc3545;
+}
+
+.password-strength.medium {
+    color: #ffc107;
+}
+
+.password-strength.strong {
+    color: #28a745;
+}
+
+/* Estilo para os termos e condições (se adicionados futuramente) */
+.terms-checkbox {
+    margin-bottom: 20px;
+}
+
+.terms-checkbox label {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #666;
+}
+
+.terms-checkbox input {
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.terms-checkbox a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}

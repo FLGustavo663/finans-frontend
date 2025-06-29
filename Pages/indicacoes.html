@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finans</title> <!-- Corrigido -->
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="Style/indicacoes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../Images/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo"><span class="logo-f">F$</span>Finans</a>
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="orcamento.html">Orçamento</a></li>
+                    <li><a href="indicacoes.html" class="active indicacoes">Indicações</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a class="quiz" href="quiz.html">Quiz</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Entrar</a>
+                    <a href="register.html" class="btn btn-primary">Registrar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Indicações</h1>
+                <p>Selecionamos os melhores livros e cursos para ajudar você em sua jornada de educação financeira.</p>
+            </div>
+        </section>
+
+        <section class="recommendations-section">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="btn btn-filter active" data-filter="all">Todos</button>
+                    <button class="btn btn-filter" data-filter="livros">Livros</button>
+                    <button class="btn btn-filter" data-filter="cursos">Cursos</button>
+                </div>
+
+                <div class="recommendations-grid">
+                    <div class="recommendation-card" data-category="livros">
+                        <img src="../Images/livro_pai_rico_pai_pobre.jpg" alt="Pai Rico, Pai Pobre">
+                        <div class="card-content">
+                            <span class="tag-level iniciante">Iniciante</span>
+                            <h4>Pai Rico, Pai Pobre</h4>
+                            <p class="author">por Robert Kiyosaki</p>
+                            <p class="description">O clássico que ensina o que os ricos ensinam aos filhos sobre
+                                dinheiro...</p>
+                            <a href="https://www.amazon.com.br/Pai-rico-pai-pobre-anos/dp/8550801488"
+                                class="btn btn-ver-item ver-livro-prpp" target="_blank">Ver Livro <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card" data-category="livros">
+                        <img src="../Images/livro_segredos_mente_milionaria.jpg" alt="Os Segredos da Mente Milionária">
+                        <div class="card-content">
+                            <span class="tag-level iniciante">Iniciante</span>
+                            <h4>Os Segredos da Mente Milionária</h4>
+                            <p class="author">por T. Harv Eker</p>
+                            <p class="description">Aprenda como padrões mentais podem influenciar seus resultados
+                                financeiros...</p>
+                            <a href="https://www.amazon.com.br/segredos-mente-milion%C3%A1ria-Harv-Eker/dp/8575422391"
+                                class="btn btn-ver-item ver-livro-smm" target="_blank">Ver Livro <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card" data-category="livros">
+                        <img src="../Images/livro_do_mil_ao_milhao.jpg" alt="Do Mil ao Milhão">
+                        <div class="card-content">
+                            <span class="tag-level intermediario">Intermediário</span>
+                            <h4>Do Mil ao Milhão</h4>
+                            <p class="author">por Thiago Nigro</p>
+                            <p class="description">Estratégias para conquistar independência financeira antes dos 30.
+                            </p>
+                            <a href="https://www.amazon.com.br/Do-mil-milh%C3%A3o-cafezinho-best-seller/dp/8595083274"
+                                class="btn btn-ver-item ver-livro-dmm" target="_blank">Ver Livro <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card" data-category="livros">
+                        <img src="../Images/livro_investidor_inteligente.jpg" alt="O Investidor Inteligente">
+                        <div class="card-content">
+                            <span class="tag-level avancado">Avançado</span>
+                            <h4>O Investidor Inteligente</h4>
+                            <p class="author">por Benjamin Graham</p>
+                            <p class="description">O guia clássico sobre investimentos em valor, considerado a bíblia...
+                            </p>
+                            <a href="https://www.amazon.com.br/investidor-inteligente-Lourdes-Sette/dp/8595080801"
+                                class="btn btn-ver-item ver-livro-ii" target="_blank">Ver Livro <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card" data-category="cursos">
+                        <img src="../Images/cursos_fundacao_bradesco.png" alt="Curso Exemplo">
+                        <div class="card-content">
+                            <span class="tag-level iniciante">Iniciante</span> <!-- Exemplo de tag para curso -->
+                            <h4>Construindo minha Proteção Financeira</h4>
+                            <p class="author">Fundação Bradesco</p>
+                            <p class="description">Você aprenderá a administrar as suas finanças por meio do
+                                planejamento e organização, realizando o mapeamento de gastos, ganhos e compromissos
+                                financeiros com a intenção de atingir um objetivo.</p>
+                            <a href="https://www.ev.org.br/cursos/Construindo-minha-Protecao-Financeira"
+                                class="btn btn-ver-item ver-curso" target="_blank">Ver Curso <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card" data-category="cursos">
+                        <img src="../Images/cursos_fundacao_bradesco.png" alt="Curso Exemplo">
+                        <div class="card-content">
+                            <span class="tag-level iniciante">Iniciante</span> <!-- Exemplo de tag para curso -->
+                            <h4>Educação Financeira</h4>
+                            <p class="author">Fundação Bradesco</p>
+                            <p class="description">Você conhecerá qual é o seu perfil financeiro, aprenderá a fazer uma
+                                análise e a elaborar um controle financeiro de qualidade e conhecerá os conceitos
+                                básicos e fundamentais sobre investimentos e sustentabilidade.</p>
+                            <a href="https://www.ev.org.br/cursos/educacao-financeira"
+                                class="btn btn-ver-item ver-curso" target="_blank">Ver Curso <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card" data-category="cursos">
+                        <img src="../Images/cursos_fundacao_bradesco.png" alt="Curso Exemplo">
+                        <div class="card-content">
+                            <span class="tag-level iniciante">Iniciante</span> <!-- Exemplo de tag para curso -->
+                            <h4>Matemática Financeira com o uso da HP 12C</h4>
+                            <p class="author">Fundação Bradesco</p>
+                            <p class="description">Este curso foi desenvolvido para que você possa aprender conceitos
+                                básicos dessa disciplina por meio da calculadora HP 12C. Além das explicações teóricas,
+                                há exemplos práticos e exercícios para ajudá-lo a fixar os conceitos que podem ser
+                                aplicados tanto em sua vida pessoal quanto na profissional. </p>
+                            <a href="https://www.ev.org.br/cursos/matematica-financeira-com-o-uso-da-hp-12c"
+                                class="btn btn-ver-item ver-curso" target="_blank">Ver Curso <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="recommendation-card" data-category="cursos">
+                        <img src="../Images/cursos_ginead.png" alt="Do Mil ao Milhão">
+                        <div class="card-content">
+                            <span class="tag-level intermediario">Intermediário</span>
+                            <h4>Economia</h4>
+                            <p class="author">GINEAD</p>
+                            <p class="description">Curso de 80 horas sobre economia desenvolvido pela Gilead. Nele, você
+                                vai aprender e desenvolver habilidades em alguns tópicos como: Introdução à Economia,
+                                Pensamento Econômico e sua Evolução, Análise macroeconômica, Análise microeconômica,
+                                Estruturas de Mercado, Setor Externo e outros assuntos.
+
+                            </p>
+                            <a href=https://www.ginead.com.br/curso/curso-online-gratis-economia
+                                class="btn btn-ver-item ver-livro-dmm" target="_blank">Ver Curso<span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card" data-category="livros">
+                        <img src="../Images/livro_do_mil_ao_milhao.jpg" alt="Do Mil ao Milhão">
+                        <div class="card-content">
+                            <span class="tag-level intermediario">Intermediário</span>
+                            <h4>Do Mil ao Milhão</h4>
+                            <p class="author">por Thiago Nigro</p>
+                            <p class="description">Estratégias para conquistar independência financeira antes dos 30.
+                            </p>
+                            <a href="https://www.amazon.com.br/Do-mil-milh%C3%A3o-cafezinho-best-seller/dp/8595083274"
+                                class="btn btn-ver-item ver-livro-dmm" target="_blank">Ver Livro <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+
+                    <div class="recommendation-card" data-category="livros">
+                        <img src="../Images/livro_do_mil_ao_milhao.jpg" alt="Do Mil ao Milhão">
+                        <div class="card-content">
+                            <span class="tag-level intermediario">Intermediário</span>
+                            <h4>Do Mil ao Milhão</h4>
+                            <p class="author">por Thiago Nigro</p>
+                            <p class="description">Estratégias para conquistar independência financeira antes dos 30.
+                            </p>
+                            <a href="https://www.amazon.com.br/Do-mil-milh%C3%A3o-cafezinho-best-seller/dp/8595083274"
+                                class="btn btn-ver-item ver-livro-dmm" target="_blank">Ver Livro <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+
+                    <div class="recommendation-card" data-category="livros">
+                        <img src="../Images/livro_do_mil_ao_milhao.jpg" alt="Do Mil ao Milhão">
+                        <div class="card-content">
+                            <span class="tag-level intermediario">Intermediário</span>
+                            <h4>Do Mil ao Milhão</h4>
+                            <p class="author">por Thiago Nigro</p>
+                            <p class="description">Estratégias para conquistar independência financeira antes dos 30.
+                            </p>
+                            <a href="https://www.amazon.com.br/Do-mil-milh%C3%A3o-cafezinho-best-seller/dp/8595083274"
+                                class="btn btn-ver-item ver-livro-dmm" target="_blank">Ver Livro <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="recommendation-card" data-category="livros">
+                        <img src="../Images/livro_do_mil_ao_milhao.jpg" alt="Do Mil ao Milhão">
+                        <div class="card-content">
+                            <span class="tag-level intermediario">Intermediário</span>
+                            <h4>Do Mil ao Milhão</h4>
+                            <p class="author">por Thiago Nigro</p>
+                            <p class="description">Estratégias para conquistar independência financeira antes dos 30.
+                            </p>
+                            <a href="https://www.amazon.com.br/Do-mil-milh%C3%A3o-cafezinho-best-seller/dp/8595083274"
+                                class="btn btn-ver-item ver-livro-dmm" target="_blank">Ver Livro <span
+                                    class="external-link-icon">&#x2197;</span></a>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="logo"><span class="logo-f">F$</span>Finans</a>
+                    <p>Planejamento financeiro simplificado para jovens.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="orcamento.html">Simulador de Orçamento</a></li>
+                        <li><a href="indicacoes.html">Indicações</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Finans. Todos os direitos reservados.</p> <!-- Ajustar ano se necessário -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Script/firebase-config.js"></script>
+    <script src="../Script/script.js"></script>
+    <script src="Script/indicacoes.js"></script>
+</body>
+
+</html>
