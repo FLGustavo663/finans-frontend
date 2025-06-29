@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             authButtons.innerHTML = `
                 <div class="user-profile">
                     <span>Olá, ${user.name}</span>
-                    <a href="Pages/perfil.html" class="profile-link">Perfil</a>
+                    <a href="/pages/perfil.html" class="profile-link">Perfil</a>
                     <button onclick="logout()" class="btn btn-outline">Sair</button>
                 </div>
             `;

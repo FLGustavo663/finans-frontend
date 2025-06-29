@@ -93,10 +93,10 @@ function updateAuthUI(user) {
                 let perfilPath;
                 if (window.location.pathname.includes('/Pages/')) {
                     // Estamos em uma subpágina, o perfil está no mesmo diretório
-                    perfilPath = "perfil.html";
+                    perfilPath = "/pages/perfil.html";
                 } else {
                     // Estamos na página principal, o perfil está no diretório Pages
-                    perfilPath = "Pages/perfil.html";
+                    perfilPath = "/pages/perfil.html";
                 }
 
                 console.log("Caminho para perfil definido como:", perfilPath);
@@ -137,9 +137,9 @@ function updateAuthUI(user) {
                     // Verificar e atualizar o href se necessário
                     let perfilPath;
                     if (window.location.pathname.includes('/Pages/')) {
-                        perfilPath = "perfil.html";
+                        perfilPath = "/pages/perfil.html";
                     } else {
-                        perfilPath = "Pages/perfil.html";
+                        perfilPath = "/pages/perfil.html";
                     }
 
                     if (profileLink.getAttribute('href') !== perfilPath) {
