@@ -90,38 +90,38 @@ function updateAuthUI(user) {
             }
 
             // Extrair primeiro nome
-            let firstName = user.email; // Fallback para email
+            let firstName = user.email.split('@')[0]; // Fallback para parte do email antes do @
             if (user.displayName) {
                 firstName = user.displayName.split(" ")[0];
             }
 
-            // Mostrar informações do usuário (exemplo)
+            // URL da foto de perfil (usar foto padrão se não houver)
+            let photoURL = user.photoURL || 'https://via.placeholder.com/40x40/27ae60/ffffff?text=' + firstName.charAt(0).toUpperCase();
+
+            // Mostrar informações do usuário
             if (!userProfileDiv) {
                 const profileDiv = document.createElement('div');
                 profileDiv.className = 'user-profile';
 
                 // Determinar o caminho correto para a página de perfil
-                // Verificar se estamos na página principal ou em uma subpágina
                 let perfilPath;
                 if (window.location.pathname.includes('/Pages/')) {
-                    // Estamos em uma subpágina, o perfil está no mesmo diretório
-                    perfilPath = "/pages/perfil.html";
+                    perfilPath = "perfil.html";
                 } else {
-                    // Estamos na página principal, o perfil está no diretório Pages
-                    perfilPath = "/pages/perfil.html";
+                    perfilPath = "Pages/perfil.html";
                 }
 
-                console.log("Caminho para perfil definido como:", perfilPath);
-
                 profileDiv.innerHTML = `
-                    <a href="${perfilPath}" class="profile-link" id="profileLink">${firstName}</a>
+                    <div class="user-profile-info">
+                        <img src="${photoURL}" alt="Foto de perfil" class="user-profile-photo" onerror="this.src='https://via.placeholder.com/40x40/27ae60/ffffff?text=${firstName.charAt(0).toUpperCase()}'">
+                        <a href="${perfilPath}" class="user-profile-name" id="profileLink">${firstName}</a>
+                    </div>
                     <button id="logoutButton" class="btn btn-outline">Sair</button>
                 `;
                 authButtonsDiv.parentNode.insertBefore(profileDiv, authButtonsDiv.nextSibling);
 
-                // Adicionar evento ao link do perfil para garantir que funcione
+                // Adicionar evento ao link do perfil
                 document.getElementById('profileLink').addEventListener('click', function(e) {
-                    // Verificar se o usuário está autenticado antes de navegar
                     if (!firebase.auth().currentUser) {
                         e.preventDefault();
                         alert("Você precisa estar logado para acessar o perfil.");
@@ -133,25 +133,31 @@ function updateAuthUI(user) {
                 document.getElementById('logoutButton').addEventListener('click', () => {
                     firebase.auth().signOut().then(() => {
                         console.log('Logout realizado com sucesso.');
-                        window.location.reload(); // Recarregar a página ou redirecionar
+                        window.location.reload();
                     }).catch(error => {
                         console.error('Erro no logout:', error);
                     });
                 });
             } else {
-                userProfileDiv.style.display = 'flex'; // Ou 'block'
+                userProfileDiv.style.display = 'flex';
 
-                // Atualizar o nome do usuário se o elemento já existir
-                const profileLink = userProfileDiv.querySelector('.profile-link');
+                // Atualizar informações do usuário se o elemento já existir
+                const profilePhoto = userProfileDiv.querySelector('.user-profile-photo');
+                const profileLink = userProfileDiv.querySelector('.user-profile-name');
+                
+                if (profilePhoto) {
+                    profilePhoto.src = photoURL;
+                    profilePhoto.alt = `Foto de perfil de ${firstName}`;
+                }
+                
                 if (profileLink) {
                     profileLink.textContent = firstName;
 
-                    // Verificar e atualizar o href se necessário
                     let perfilPath;
                     if (window.location.pathname.includes('/Pages/')) {
-                        perfilPath = "/pages/perfil.html";
+                        perfilPath = "perfil.html";
                     } else {
-                        perfilPath = "/pages/perfil.html";
+                        perfilPath = "Pages/perfil.html";
                     }
 
                     if (profileLink.getAttribute('href') !== perfilPath) {
@@ -162,7 +168,7 @@ function updateAuthUI(user) {
 
         } else {
             // Mostrar botões Entrar/Registrar
-            authButtonsDiv.style.display = 'flex'; // Ou 'block'
+            authButtonsDiv.style.display = 'flex';
             
             // Mostrar seção CTA e botão "Começar Agora" quando usuário não estiver logado
             if (ctaSection) {

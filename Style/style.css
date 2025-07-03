@@ -53,7 +53,7 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: relative;
 }
@@ -64,6 +64,7 @@ header .container {
     font-size: 2.2rem;
     color: #27ae60;
     text-decoration: none;
+    margin-right: 100px;
 }
 
 .logo .logo-f {
@@ -106,7 +107,9 @@ header .container {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 100px;
+    justify-content: center;
+    flex: 1;
+    gap: 200px;
 }
 
 .nav-menu ul {
@@ -528,15 +531,35 @@ footer {
     gap: 15px;
 }
 
-.user-profile span,
-.user-profile .profile-link {
-    color: #27ae60;
-    font-weight: 500;
-    text-decoration: none;
+.user-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.user-profile .profile-link:hover {
+.user-profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #27ae60;
+}
+
+.user-profile-name {
+    color: #27ae60;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.user-profile-name:hover {
     text-decoration: underline;
+}
+
+.user-profile .btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
 }
 
 /* Responsividade */
@@ -578,6 +601,8 @@ footer {
         transition: right 0.3s ease;
         z-index: 1000;
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        /* Resetar flex para mobile */
+        flex: none;     
     }
 
     .nav-menu.active {
@@ -603,6 +628,24 @@ footer {
     }
 
     .auth-buttons .btn {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .user-profile {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .user-profile-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .user-profile .btn {
         width: 100%;
         text-align: center;
         margin: 0;
