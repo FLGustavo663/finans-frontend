@@ -542,7 +542,6 @@ footer {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #27ae60;
 }
 
 .user-profile-name {
