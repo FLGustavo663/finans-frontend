@@ -72,10 +72,22 @@ function updateAuthUI(user) {
     const authButtonsDiv = document.querySelector('.auth-buttons');
     const userProfileDiv = document.querySelector('.user-profile'); // Supondo que exista um div para perfil
 
+    // Elementos a serem ocultados quando o usuário estiver logado
+    const ctaSection = document.getElementById('cta-section');
+    const comecarAgoraBtn = document.getElementById('comecar-agora-btn');
+
     if (authButtonsDiv) {
         if (user) {
             // Esconder botões Entrar/Registrar
             authButtonsDiv.style.display = 'none';
+
+            // Ocultar seção CTA e botão "Começar Agora" quando usuário estiver logado
+            if (ctaSection) {
+                ctaSection.style.display = 'none';
+            }
+            if (comecarAgoraBtn) {
+                comecarAgoraBtn.style.display = 'none';
+            }
 
             // Extrair primeiro nome
             let firstName = user.email; // Fallback para email
@@ -151,6 +163,15 @@ function updateAuthUI(user) {
         } else {
             // Mostrar botões Entrar/Registrar
             authButtonsDiv.style.display = 'flex'; // Ou 'block'
+            
+            // Mostrar seção CTA e botão "Começar Agora" quando usuário não estiver logado
+            if (ctaSection) {
+                ctaSection.style.display = 'block';
+            }
+            if (comecarAgoraBtn) {
+                comecarAgoraBtn.style.display = 'inline-block';
+            }
+            
             // Esconder informações do usuário
             if (userProfileDiv) {
                 userProfileDiv.style.display = 'none';
