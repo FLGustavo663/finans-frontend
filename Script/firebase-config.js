@@ -105,10 +105,10 @@ function updateAuthUI(user) {
 
                 // Determinar o caminho correto para a página de perfil
                 let perfilPath;
-                if (window.location.pathname.includes('/Pages/')) {
+                if (window.location.pathname.includes('/pages/')) {
                     perfilPath = "perfil.html";
                 } else {
-                    perfilPath = "Pages/perfil.html";
+                    perfilPath = "pages/perfil.html";
                 }
 
                 profileDiv.innerHTML = `
@@ -125,7 +125,7 @@ function updateAuthUI(user) {
                     if (!firebase.auth().currentUser) {
                         e.preventDefault();
                         alert("Você precisa estar logado para acessar o perfil.");
-                        window.location.href = perfilPath.includes('Pages/') ? 'Pages/login.html' : 'login.html';
+                        window.location.href = perfilPath.includes('pages/') ? 'pages/login.html' : 'login.html';
                     }
                 });
 
@@ -154,10 +154,10 @@ function updateAuthUI(user) {
                     profileLink.textContent = firstName;
 
                     let perfilPath;
-                    if (window.location.pathname.includes('/Pages/')) {
+                    if (window.location.pathname.includes('/pages/')) {
                         perfilPath = "perfil.html";
                     } else {
-                        perfilPath = "Pages/perfil.html";
+                        perfilPath = "pages/perfil.html";
                     }
 
                     if (profileLink.getAttribute('href') !== perfilPath) {
