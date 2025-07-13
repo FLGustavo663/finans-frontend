@@ -538,8 +538,8 @@ footer {
 }
 
 .user-profile-photo {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -640,7 +640,6 @@ footer {
     }
 
     .user-profile-info {
-        flex-direction: column;
         gap: 10px;
     }
 
